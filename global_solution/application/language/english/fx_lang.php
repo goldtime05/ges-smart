@@ -11,6 +11,7 @@ $lang['edit_inventory'] = 'Edit Inventory';
 $lang['delete_inventory'] = 'Delete Inventory';
 $lang['access_denied'] = 'Module Access Denied! Contact admin for assistance';
 $lang['activities'] = 'Activity Feed';
+$lang['team_leader'] = 'Team Leader';
 $lang['activity'] = 'Activity';
 $lang['activity_date'] = 'Activity Date';
 $lang['address'] = 'Address';

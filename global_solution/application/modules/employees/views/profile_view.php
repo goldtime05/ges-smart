@@ -2137,23 +2137,19 @@ $check_teamlead = $this->db->get_where('dgt_users',array('id'=>$employee_details
 								<div class="modal-btn delete-action">
 									<div class="row">
 										<div class="col-6">
-											<!-- <a href="<?php echo base_url(); ?>employees/delete_attachments/<?php echo $value['id']; ?>" class="btn btn-primary continue-btn">Delete</a> -->
-
 											<form method="post" id="delete_attachment_form" action="<?php echo base_url(); ?>employees/delete_attachments/<?php echo $value['id']; ?>">
 												<div class="form-group">													
 													<input class="form-control" type="hidden" name = "user_id" value="<?php echo $employee_details['user_id']; ?>">
 												</div>												
 												<div class="submit-section">
-													<button class="btn btn-primary submit-btn">Delete</button>													
+													<button class="btn btn-primary submit-btn">Delete</button>
 												</div>
 											</form>
 										</div>
-										<div class="col-6">
-											<!-- <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a> -->
+										<div class="col-6">											
 											<form method="post" id="cancel_attachment_form" action="">
-												<div class="submit-section">
-													<!-- <button class="btn btn-primary submit-btn">Cancel</button> -->
-													<a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+												<div class="submit-section" style="margin-top: 20px;">													
+													<a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn" style="width: 195px; margin: 0 auto;">Cancel</a>
 												</div>
 											</form>
 										</div>

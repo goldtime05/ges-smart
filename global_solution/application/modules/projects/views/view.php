@@ -644,6 +644,50 @@ $currency = ($p->client > 0) ? Client::get_currency_code($p->client)->code : $p-
 
 														<div class="clearfix"></div>
 
+														<span class="message-content">Leads</span>
+
+													</div>
+
+												</div>
+
+											</a>
+
+										</li>
+
+									</ul>
+
+								</div>
+
+							</div>
+
+							<div class="card project-user">
+
+								<div class="card-body">
+
+									<!-- <h6 class="card-title m-b-20">Assigned Leader <a class="pull-right btn btn-primary btn-xs" data-toggle="modal" data-target="#assign_leader"><i class="fa fa-plus"></i> Add</a></h6> -->
+
+									<ul class="list-box">
+
+										<li>
+
+											<a href="<?php echo base_url(); ?>employees/profile_view/<?php echo $p->team_lead; ?>">
+
+												<div class="list-item">
+
+													<div class="list-left">
+
+													    <?php $lead_details = $this->db->get_where('account_details',array('user_id'=>$p->team_lead))->row_array(); ?>
+
+														<span class="avatar"><?php echo strtoupper($lead_details['fullname'][0]); ?></span>
+
+													</div>
+
+													<div class="list-body">
+
+														<span class="message-author"><?php echo $lead_details['fullname']; ?></span>
+
+														<div class="clearfix"></div>
+
 														<span class="message-content">Team Leader</span>
 
 													</div>

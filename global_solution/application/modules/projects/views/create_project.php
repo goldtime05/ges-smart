@@ -73,10 +73,24 @@
 						<?php // } ?>
 						<?php // } ?>
 					</div>
-				</div> 
+				</div>
 				<?php // } ?>
 				<div class="row">
 					
+					<div class="col-md-6">					
+						<div class="form-group">
+							<label>Team Leader <span class="text-danger">*</span></label>							
+							<select class="select2-option" style="width:100%;" name="team_lead" >
+								<optgroup label="<?=lang('admin_staff')?>"> 
+								<?php foreach (User::team() as $key => $user) { ?>
+								<option value="<?=$user->id?>"><?=ucfirst(User::displayName($user->id))?></option>
+								<?php } ?>	
+								</optgroup> 
+							</select>
+						</div>						
+					</div>
+
+
 					<div class="col-md-6">
 						<?php // if (User::is_admin() || User::perm_allowed(User::get_id(),'add_projects')) { ?>
 						<?php // if (User::is_admin()) { ?>
@@ -93,7 +107,10 @@
 						</div>
 						<?php // } ?>
 						<?php // } ?>
-					</div>
+					</div>					
+				</div>
+				<div class="row">
+					
 					<div class="col-md-6">
 						<div class="form-group">
 							<label><?=lang('fixed_rate')?></label>
@@ -105,22 +122,23 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row">
+
 					<div class="col-md-6">
 						<div class="form-group">
 							<label><?=lang('start_date')?> <span class="text-danger">*</span></label> 
 							<input class="datepicker-input form-control" type="text" value="<?=strftime(config_item('date_format'), time());?>" name="start_date" data-date-format="<?=config_item('date_picker_format');?>" >
 						</div> 
-					</div> 
+					</div>
+					
+				</div>
+				<div class="row">
 					<div class="col-md-6">
 						<div class="form-group">
 							<label><?=lang('due_date')?> <span class="text-danger">*</span></label>
 							<input class="datepicker-input form-control" type="text" value="<?=strftime(config_item('date_format'), time());?>" name="due_date" data-date-format="<?=config_item('date_picker_format');?>" >
 						</div> 
 					</div> 
-				</div>
-				<div class="row">
+
 					<div id="hourly_rate" class="col-md-6">
 						<div class="form-group">
 							<label><?=lang('hourly_rate')?>  (<?=lang('eg')?> 50.00) <span class="text-danger">*</span></label>
@@ -132,7 +150,10 @@
 							<label><?=lang('fixed_price')?> (<?=lang('eg')?> 300 ) <span class="text-danger">*</span></label>
 							<input type="text" class="form-control" placeholder="300" name="fixed_price" value="<?=set_value('fixed_price')?>">
 						</div>
-					</div>
+					</div>					
+				</div>
+
+				<div class="row">
 					<div class="col-md-6">
 						<div class="form-group">
 							<label><?=lang('estimated_hours')?> <span class="text-danger">*</span></label>

@@ -94,6 +94,7 @@
 					<th class="col-title "><?=lang('status')?></th>
 					<?php } ?>
 					<th><?=('Lead')?></th>
+					<th><?=('Team Leader')?></th>
 					<th><?=lang('team_members')?></th>
 					<th class="col-date "><?=lang('used_budget')?></th>
 					<?php  if ((User::login_role_name() != 'admin') && (User::login_role_name() != 'superadmin')) { ?>
@@ -156,6 +157,18 @@
 							<li>
 								<a>
 									<img src="<?php echo User::avatar_url($p->assign_lead); ?>" class="img-circle" data-toggle="tooltip" data-title="<?=User::displayName($p->assign_lead); ?>" data-placement="top">
+								</a>
+							</li>
+							 
+						</ul>
+					</td>
+
+					<td class="text-muted">
+						<ul class="team-members">
+							 
+							<li>
+								<a>
+									<img src="<?php echo User::avatar_url($p->team_lead); ?>" class="img-circle" data-toggle="tooltip" data-title="<?=User::displayName($p->team_lead); ?>" data-placement="top">
 								</a>
 							</li>
 							 

@@ -98,6 +98,23 @@
 							</div>
 
 							<div class="form-group">
+								<label class="col-lg-3 control-label">Team Leader <span class="text-danger">*</span></label>
+								<div class="col-lg-5">
+
+									<select class="select2-option form-control"   style="width:260px" name="team_lead" > 
+										<optgroup label="Staff">
+											<?php foreach (User::team() as $user): ?>
+												<option value="<?=$user->id?>"  <?php 
+													if ($user->id == $project->team_lead) { ?> selected = "selected" <?php }   ?>>
+													<?=ucfirst(User::displayName($user->id))?>
+												</option>
+											<?php endforeach ?>
+										</optgroup> 
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group">
 								<label class="col-lg-3 control-label"><?=lang('assigned_to')?> <span class="text-danger">*</span></label>
 								<div class="col-lg-5">
 

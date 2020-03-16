@@ -464,7 +464,7 @@ if($this->uri->segment(1) == 'chats'){
                 <?php } ?>
 
                 <?php }  $all_routes = array_unique(array_merge($all_menu_routes,$all_sun_menu_routes), SORT_REGULAR);
-                        $all_routes_name= array_values($all_routes)  ;  
+                        $all_routes_name= array_values($all_routes);  
                         $this->session->set_userdata('all_routes',$all_routes_name);
                     //echo "<pre>"; print_r( $all_menu_routes); exit;
                     // echo '<pre>'; print_r($all_routes); exit;
